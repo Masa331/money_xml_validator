@@ -1,0 +1,3 @@
+[submodule "lib/money_xml_validator/money_xsd"]
+	path = lib/money_xml_validator/money_xsd
+	url = git@github.com:Masa331/money_xsd.git
