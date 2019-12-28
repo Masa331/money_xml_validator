@@ -1,8 +1,6 @@
 # MoneyXmlValidator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/money_xml_validator`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Ruby validator for Money S3 XML documents. Takes in Money S3 XML document, validates it against official schema, and returns errors.
 
 ## Installation
 
@@ -22,11 +20,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Valid document:
+```ruby
+xml = File.read('valid_invoices.xml')
+errors = MoneyXmlValidator.validate(xml)
+# => []
+```
+
+Invalid document:
+```ruby
+xml = File.read('invalid_invoices.xml')
+errors = MoneyXmlValidator.validate(xml)
+# => [#<Nokogiri::XML::SyntaxError: 6:0: ERROR: Element 'nonsense': This element is not expected. Expected is one of ( Doklad, ZpusobUctovani, Storno, Del, GUID, Rada, CisRada, UDoklad, Popis, Vystaveno ).>]
+```
 
 ## Changelog
 
-### 17.12.2019
+### 17.12.2019 - gem v 1.0.0
 
 * update money xsd submodules
 
