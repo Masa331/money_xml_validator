@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    money_xml_validator (0.0.3)
+    money_xml_validator (1.0.0)
       nokogiri
 
 GEM
   remote: https://rubygems.org/
   specs:
     mini_portile2 (2.4.0)
-    nokogiri (1.10.7)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     rake (13.0.1)
 
